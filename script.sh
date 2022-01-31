@@ -26,8 +26,8 @@ echo "Usage: $0 [-v <PACKAGE_VERSION>]"
 echo "       PACKAGE_VERSION is an optional paramater whose default value is v0.5.1"
 
 # install tools and dependent packages
-apt -y update
-apt -y install git wget g++ make python2 curl
+yum -y update
+yum -y install git wget gcc-c++ make python2 curl
 
 NODE_VERSION=v12.22.4
 #installing nvm
