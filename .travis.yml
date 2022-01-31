@@ -1,0 +1,7 @@
+arch: ppc64le
+dist: focal
+os: linux
+
+script:
+  - chmod +x script.sh
+  - docker run --rm -t -v $PWD:/tmp/ registry.access.redhat.com/ubi8/ubi:8.5 ./tmp/script.sh
