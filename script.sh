@@ -4,9 +4,13 @@ PACKAGE_URL=https://github.com/fsnotify/fsnotify.git
 
 #yum install -y git golang
 
-go get $PACKAGE_NAME@$PACKAGE_VERSION
+mkdir -p $GOPATH/github.com/fsnotify
+cd $GOPATH/github.com/fsnotify
 
-cd ~/go/pkg/mod/$PACKAGE_NAME@$PACKAGE_VERSION
+git clone https://github.com/fsnotify/fsnotify.git
+git checkout $PACKAGE_VERSION
+cd fsnotify
+
 go mod tidy
 go install
 go test
