@@ -8,8 +8,8 @@ mkdir -p $GOPATH/github.com/fsnotify
 cd $GOPATH/github.com/fsnotify
 
 git clone https://github.com/fsnotify/fsnotify.git
-git checkout $PACKAGE_VERSION
 cd fsnotify
+git checkout $PACKAGE_VERSION
 
 go mod tidy
 go install
